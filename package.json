@@ -1,0 +1,28 @@
+{
+  "name": "mpuzzlesye",
+  "version": "1.0.0",
+  "description": "Engine System of game Match Puzzle",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaelobrasil/MPuzzleSyE.git"
+  },
+  "keywords": [
+    "match3",
+    "match",
+    "3",
+    "match",
+    "puzzle",
+    "match",
+    "puzzle"
+  ],
+  "author": "Raphael Brasil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raphaelobrasil/MPuzzleSyE/issues"
+  },
+  "homepage": "https://github.com/raphaelobrasil/MPuzzleSyE#readme"
+}
