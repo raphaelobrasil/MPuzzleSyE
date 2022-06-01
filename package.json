@@ -1,9 +1,11 @@
 {
   "name": "mpuzzlesye",
-  "version": "1.0.12",
+  "version": "1.0.16",
   "description": "Engine System of game Match Puzzle",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "run tsc"
   },
   "repository": {
     "type": "git",
@@ -23,5 +25,10 @@
   "bugs": {
     "url": "https://github.com/raphaelobrasil/MPuzzleSyE/issues"
   },
-  "homepage": "https://github.com/raphaelobrasil/MPuzzleSyE#readme"
+  "homepage": "https://github.com/raphaelobrasil/MPuzzleSyE#readme",
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.7.2"
+  }
 }
