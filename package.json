@@ -1,12 +1,13 @@
 {
   "name": "mpuzzlesye",
-  "version": "1.0.1",
+  "version": "1.0.17",
   "description": "Engine System of game Match Puzzle",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest --watchAll --coverage"
+    "build": "run tsc",
+    "test": "jest"
   },
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/raphaelobrasil/MPuzzleSyE.git"
@@ -27,11 +28,11 @@
   },
   "homepage": "https://github.com/raphaelobrasil/MPuzzleSyE#readme",
   "devDependencies": {
-    "@swc/core": "^1.2.196",
-    "@swc/jest": "^0.2.21",
-    "@types/jest": "^27.5.1",
+    "@types/jest": "^27.5.2",
     "jest": "^28.1.0",
-    "jest-environment-jsdom": "^28.1.0",
-    "ts-node": "^10.8.0"
+    "ts-jest": "^28.0.3",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.7.2"
   }
 }
