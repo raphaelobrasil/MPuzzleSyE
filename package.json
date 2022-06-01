@@ -1,6 +1,6 @@
 {
   "name": "mpuzzlesye",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Engine System of game Match Puzzle",
   "main": "src/index.ts",
   "scripts": {
