@@ -4,7 +4,7 @@
   "description": "Engine System of game Match Puzzle",
   "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,10 @@
   "bugs": {
     "url": "https://github.com/raphaelobrasil/MPuzzleSyE/issues"
   },
-  "homepage": "https://github.com/raphaelobrasil/MPuzzleSyE#readme"
+  "homepage": "https://github.com/raphaelobrasil/MPuzzleSyE#readme",
+  "devDependencies": {
+    "@types/jest": "^27.5.1",
+    "jest": "^28.1.0",
+    "ts-node": "^10.8.0"
+  }
 }
