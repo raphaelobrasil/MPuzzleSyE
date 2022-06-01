@@ -4,8 +4,9 @@
   "description": "Engine System of game Match Puzzle",
   "main": "src/index.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll --coverage"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/raphaelobrasil/MPuzzleSyE.git"
@@ -26,8 +27,11 @@
   },
   "homepage": "https://github.com/raphaelobrasil/MPuzzleSyE#readme",
   "devDependencies": {
+    "@swc/core": "^1.2.196",
+    "@swc/jest": "^0.2.21",
     "@types/jest": "^27.5.1",
     "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
     "ts-node": "^10.8.0"
   }
 }
