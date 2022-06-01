@@ -1,8 +1,0 @@
-export * as baseExtract from './baseExctract'
-export * from './clearTable'
-export * from './insertNewStones'
-export * as simpleExtract from './simpleMatch/simpleMatch'
-export * as crossExtract from './crossMatch/crossMatch'
-export * from './interface'
-export * from './category'
-export * from './organizeStructure'
