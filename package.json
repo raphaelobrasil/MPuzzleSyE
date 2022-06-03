@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "run tsc",
-    "test": "jest"
+    "test": "jest --watchAll --coverage"
   },
   "repository": {
     "type": "git",
