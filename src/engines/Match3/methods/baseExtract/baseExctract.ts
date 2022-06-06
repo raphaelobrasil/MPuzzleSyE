@@ -1,5 +1,5 @@
-import { IMaskBaseTable } from './interface'
-import { IBasicTable } from '../../index'
+import { IMaskBaseTable } from '../interface'
+import { IBasicTable } from '../../../index'
 
 const extractRow = (table:IBasicTable[][]):IMaskBaseTable => ({
   table: table,

@@ -1,4 +1,4 @@
-import { stoneGacha, IBasicTable, IStoneDefinition } from '../../../engines'
+import { stoneGacha, IBasicTable, IStoneDefinition } from '../../..'
 
 export const insertNewStones = async (table: IBasicTable[][], stoneConfig: IStoneDefinition<number, string, string>) => {
   try {

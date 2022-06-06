@@ -1,4 +1,4 @@
-import { IBasicTable } from '../../../engines'
+import { IBasicTable } from '../../..'
 
 const checkingEmptySpaces = (count: number, column: IBasicTable[]) => column.length < count
   ? [...column, ...Array(count - column.length).fill({ id: 0, type: 'void', category: '' }).map(voidStone => voidStone)]
