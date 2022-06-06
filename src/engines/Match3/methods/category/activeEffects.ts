@@ -1,8 +1,8 @@
 import { IActiveEffects, ISequentialEffects, INewSequencial, IActiveEffectsInMatchs } from './interface'
-import { iCrossOccurrence } from '../../'
+import { ICrossOccurrence } from '../../'
 
 export const activeEffects = async ({ table, activeCategorys, row, column, stone }: IActiveEffects) => {
-  let occurrences: iCrossOccurrence[] = []
+  let occurrences: ICrossOccurrence[] = []
   await activeCategorys.forEach(async (effects) => {
     if (effects.category === stone.category) {
       occurrences = await effects.effect({ row, column, table, stone })
@@ -15,7 +15,7 @@ export const activeEffects = async ({ table, activeCategorys, row, column, stone
 }
 
 export const activeEffectsInMatchs = async ({ table, activeCategorys, occurrences }: IActiveEffectsInMatchs) => {
-  let response: iCrossOccurrence[] = []
+  let response: ICrossOccurrence[] = []
   for (const { row, column, stone } of occurrences) {
     for await (const effects of activeCategorys) {
       if (effects.category === stone.category) {
@@ -39,7 +39,7 @@ export const activeEffectsInMatchs = async ({ table, activeCategorys, occurrence
   }
 }
 
-const formatSequencialEffect = async (occurrences: iCrossOccurrence[], category: string, order: number) => ({
+const formatSequencialEffect = async (occurrences: ICrossOccurrence[], category: string, order: number) => ({
   occurrences, category, order
 })
 

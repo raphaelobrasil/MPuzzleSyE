@@ -1,4 +1,4 @@
-import { IMatchValidate, IFilterMatchSimple, iCrossOccurrence } from '../../'
+import { IMatchValidate, IFilterMatchSimple, ICrossOccurrence } from '../../'
 import { IBasicTable, IStoneDefinition } from '../../../'
 
 export interface ICategoryApplication {
@@ -43,12 +43,12 @@ export interface INewSequencial {
 }
 
 export interface ISpecialEffect {
-    occurrences: iCrossOccurrence[]
+    occurrences: ICrossOccurrence[]
     category: string
     order: number
 }
 export interface ISequencial {
-    sequence: iCrossOccurrence[]
+    sequence: ICrossOccurrence[]
     activated: dragDrop[]
 }
 
@@ -60,7 +60,7 @@ export interface IEffects {
 }
 
 export interface IEffectsCategory {
-    effect: (props: IEffects) => Promise<iCrossOccurrence[]>
+    effect: (props: IEffects) => Promise<ICrossOccurrence[]>
     category: string
     stoneIds: number[]
     rule: number
@@ -72,7 +72,7 @@ export interface IResponseEffect {
 }
 
 interface IEffectSequence {
-    coordinates: iCrossOccurrence[]
+    coordinates: ICrossOccurrence[]
     effect: string
     cell: dragDrop
     order: number
@@ -100,7 +100,7 @@ export interface IEvaluatingMatch {
 }
 
 export interface IOrganizateOrder {
-    ranges: iCrossOccurrence[]
+    ranges: ICrossOccurrence[]
     type: 'periodRow' | 'periodColumn'
 }
 

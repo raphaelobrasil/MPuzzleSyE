@@ -1,4 +1,4 @@
-import { IBasicTable, IMatchValidate, iOccurrence } from '../../../../src/engines'
+import { IBasicTable, IMatchValidate, IOccurrence } from '../../../../src/engines'
 
 const callStone = {
   void: { id: 0, type: 'void', category: '' },
@@ -31,11 +31,11 @@ const crossPeriods = (periodRow: number, periodColumn: number) => ({
 })
 
 const callStoneOcorrence = {
-  dark (occurrence: number): iOccurrence { return { id: 1, type: 'dark', category: '', occurrence: occurrence } },
-  light (occurrence: number): iOccurrence { return { id: 2, type: 'light', category: '', occurrence: occurrence } },
-  red (occurrence: number): iOccurrence { return { id: 3, type: 'red', category: '', occurrence: occurrence } },
-  blue (occurrence: number): iOccurrence { return { id: 4, type: 'blue', category: '', occurrence: occurrence } },
-  green (occurrence: number): iOccurrence { return { id: 5, type: 'green', category: '', occurrence: occurrence } }
+  dark (occurrence: number): IOccurrence { return { id: 1, type: 'dark', category: '', occurrence: occurrence } },
+  light (occurrence: number): IOccurrence { return { id: 2, type: 'light', category: '', occurrence: occurrence } },
+  red (occurrence: number): IOccurrence { return { id: 3, type: 'red', category: '', occurrence: occurrence } },
+  blue (occurrence: number): IOccurrence { return { id: 4, type: 'blue', category: '', occurrence: occurrence } },
+  green (occurrence: number): IOccurrence { return { id: 5, type: 'green', category: '', occurrence: occurrence } }
 }
 
 const crossTableModelSevenDerivOne: IBasicTable[][] = [

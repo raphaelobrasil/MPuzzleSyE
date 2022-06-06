@@ -1,5 +1,5 @@
 import {
-  iOccurrence,
+  IOccurrence,
   IFilterMatchSimple
 } from '../../interface'
 import {
@@ -9,7 +9,7 @@ import {
 import { valideMatchSequence } from './valideMatch_methods'
 
 export const getOccurrences = ({ data, orderPeriod }: Ioccurrences) => {
-  let getPeriod: iOccurrence[] = []
+  let getPeriod: IOccurrence[] = []
   data.forEach((stonePeriod, occurrence) => {
     if (stonePeriod.id === orderPeriod) {
       getPeriod = [...getPeriod, {

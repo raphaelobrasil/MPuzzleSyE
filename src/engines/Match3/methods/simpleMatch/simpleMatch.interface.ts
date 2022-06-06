@@ -1,7 +1,7 @@
 import {
   IMaskBaseTable,
   IOccurrencePeriod,
-  iOccurrence
+  IOccurrence
 } from '../interface'
 import { IStoneDefinition, IBasicTable } from '../../../index'
 
@@ -27,5 +27,5 @@ export interface Ioccurrences {
 
 export interface ISequenceValide {
   count: number
-  Occ: iOccurrence[]
+  Occ: IOccurrence[]
 }

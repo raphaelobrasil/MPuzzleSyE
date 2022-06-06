@@ -1,6 +1,6 @@
 import {
   IOccurrencePeriod,
-  iOccurrence
+  IOccurrence
 } from '../../interface'
 import {
   ISequenceValide
@@ -9,7 +9,7 @@ import {
 const sequenceValide = ({ count, Occ }: ISequenceValide) => count > 2 ? Occ : []
 
 export const valideMatchSequence = (period: IOccurrencePeriod) => {
-  const sequence: iOccurrence[][] = []
+  const sequence: IOccurrence[][] = []
   let occurrenceCount = 0
   let index = 0
   period.orderPeriod.forEach((Occu) => {

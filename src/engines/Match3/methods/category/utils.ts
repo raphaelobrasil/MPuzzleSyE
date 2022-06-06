@@ -1,11 +1,11 @@
 
 import { IEligibleGame, IUpdateTable, IEvaluatingMatch, IOrganizateOrder, IMoveRowVerify } from './interface'
-import { iOccurrence } from '../interface'
+import { IOccurrence } from '../interface'
 
 export const eligibleGame = ({ config, stone, countMatch, rule }: IEligibleGame) =>
   config.some(item => item.type === stone) && countMatch >= rule
 
-const getOccorrences = (occorrences: iOccurrence[]) => occorrences.reduce((count, info) =>
+const getOccorrences = (occorrences: IOccurrence[]) => occorrences.reduce((count, info) =>
   [...new Set([...count, info.occurrence])], [] as number[])
 
 const updateTable = ({ config, match, category, rule, oldTable }: IUpdateTable) => {

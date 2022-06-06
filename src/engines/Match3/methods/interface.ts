@@ -6,19 +6,19 @@ export interface IMaskBaseTable {
   countColumn: number
 }
 export interface IOccurrencePeriod {
-  orderPeriod: iOccurrence[]
+  orderPeriod: IOccurrence[]
   stone: string
   period: number
 }
 export interface IFilterMatchSimple {
-  orderPeriod: iOccurrence[][]
+  orderPeriod: IOccurrence[][]
   stone: string
   period: number
   direction: 'column' | 'row'
   idMatch: string
   chains?: string[]
 }
-export interface iOccurrence {
+export interface IOccurrence {
   occurrence: number
   id: number
   type: string
@@ -26,12 +26,12 @@ export interface iOccurrence {
 }
 
 export interface IFilterMatchCross {
-  occurrences: iCrossOccurrence[]
+  occurrences: ICrossOccurrence[]
   id: number
   type: string
 }
 
-export interface iCrossOccurrence {
+export interface ICrossOccurrence {
   periodRow: number
   periodColumn: number
 }

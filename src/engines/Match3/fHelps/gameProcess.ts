@@ -4,7 +4,7 @@ import { crossMatchValitador } from './crossAction'
 import { effectValidInMatch } from './effectValidaInMatch'
 import {
   clearMatchs, insertNewStones, organizeStructure, ISequentialEffects,
-  sequentialEffects, iCrossOccurrence, clearInitEffect, clearSequentialEffects
+  sequentialEffects, ICrossOccurrence, clearInitEffect, clearSequentialEffects
 } from '../../'
 
 export const gameProcess = async ({ table, effects, config, move }: IGameProcess) => {
@@ -58,7 +58,7 @@ export const sequenceHistory = async ({ sequenceInitial, table, effects }: ISequ
   }]
   while (response[stage].sequence.HasSequence) {
     const newSequencial = {
-      sequence: await response[stage].sequence.newOccurrences.reduce((loot: iCrossOccurrence[], info) => [...loot, ...info.occurrences], []),
+      sequence: await response[stage].sequence.newOccurrences.reduce((loot: ICrossOccurrence[], info) => [...loot, ...info.occurrences], []),
       activated: await response[stage].sequence.activated
     }
     stage++

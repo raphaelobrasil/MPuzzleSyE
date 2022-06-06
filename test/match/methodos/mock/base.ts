@@ -1,5 +1,5 @@
 import { IStoneDefinition, IBasicTable } from '../../../../src/engines'
-import { IMaskBaseTable, iOccurrence } from '../../../../src/engines/Match3'
+import { IMaskBaseTable, IOccurrence } from '../../../../src/engines/Match3'
 
 const categoryDefault = [
   'pattern_default', 'pattern_four', 'pattern_five'
@@ -80,11 +80,11 @@ const tableColumn: IMaskBaseTable = {
 }
 
 const callStoneOcorrence = {
-  dark (occurrence: number): iOccurrence { return { id: 1, type: 'dark', category: '', occurrence: occurrence } },
-  light (occurrence: number): iOccurrence { return { id: 2, type: 'light', category: '', occurrence: occurrence } },
-  red (occurrence: number): iOccurrence { return { id: 3, type: 'red', category: '', occurrence: occurrence } },
-  blue (occurrence: number): iOccurrence { return { id: 4, type: 'blue', category: '', occurrence: occurrence } },
-  green (occurrence: number): iOccurrence { return { id: 5, type: 'green', category: '', occurrence: occurrence } }
+  dark (occurrence: number): IOccurrence { return { id: 1, type: 'dark', category: '', occurrence: occurrence } },
+  light (occurrence: number): IOccurrence { return { id: 2, type: 'light', category: '', occurrence: occurrence } },
+  red (occurrence: number): IOccurrence { return { id: 3, type: 'red', category: '', occurrence: occurrence } },
+  blue (occurrence: number): IOccurrence { return { id: 4, type: 'blue', category: '', occurrence: occurrence } },
+  green (occurrence: number): IOccurrence { return { id: 5, type: 'green', category: '', occurrence: occurrence } }
 }
 
 export const base = {

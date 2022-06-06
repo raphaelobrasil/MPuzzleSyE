@@ -1,15 +1,15 @@
 import { IeffectValidInMatch, IDetectEffectInOccurrences } from './interface'
-import { IFilterMatchSimple, IFilterMatchCross, iOccurrence, IBasicTable } from '../../'
+import { IFilterMatchSimple, IFilterMatchCross, IOccurrence, IBasicTable } from '../../'
 
 const format = (prop: IDetectEffectInOccurrences) => prop
 
-const formatResponse = ({ id, type, occurrence, category }: iOccurrence, direction: 'column' | 'row', period: number) => format({
+const formatResponse = ({ id, type, occurrence, category }: IOccurrence, direction: 'column' | 'row', period: number) => format({
   column: direction === 'column' ? period : occurrence,
   row: direction === 'row' ? period : occurrence,
   stone: { id, type, category }
 })
 
-const detectEffectInOccurrences = async (occurrences: iOccurrence[][], direction: 'column' | 'row', period: number) => {
+const detectEffectInOccurrences = async (occurrences: IOccurrence[][], direction: 'column' | 'row', period: number) => {
   let response: IDetectEffectInOccurrences[] = []
   for (const listOccurrence of occurrences) {
     for await (const occurrence of listOccurrence) {
