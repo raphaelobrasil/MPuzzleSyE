@@ -4,4 +4,4 @@ export * from './gameStart'
 export * from './gameProcess'
 export * from './interface'
 export * from './helps'
-export * from './simulateTests'
+

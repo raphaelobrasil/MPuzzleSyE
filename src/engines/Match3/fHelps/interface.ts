@@ -34,28 +34,6 @@ export interface IeffectValidInMatch {
     table: IBasicTable[][]
 }
 
-export interface IClearStage {
-    table: IBasicTable[][]
-    match: IMatchValidate
-    effectActive?: IEffectsResult
-}
-
-export interface IEffectsResult {
-    initEffect: ISequencial
-    sequenceEffect?: ISequenceHistory[]
-}
-
-export interface INextStage {
-    table: IBasicTable[][]
-    effects: IEffectsCategory[]
-    config: IStoneDefinition<number, string, string>
-    match: IMatchValidate
-    move?: {
-        drag: dragDrop
-        drop: dragDrop
-    }
-}
-
 export interface IResponseHistory {
     sequence: INewSequencial
     stage: number
