@@ -1,4 +1,4 @@
-import { IBasicTable, ISequencial, ISequenceHistory } from '../../../../src/engines'
+import { IBasicTable, ISequencial, ISequenceHistory } from '../../../src/engines'
 
 const crossPeriods = (periodRow: number, periodColumn: number) => ({
   periodRow: periodRow,
@@ -1015,7 +1015,7 @@ const activateEffectTableThreeModelTwoSequence: ISequenceHistory[] = [
   }
 ]
 
-export const EffectsDefaults = {
+export {
   tableModelEffectOne,
   tableModelEffectTwo,
   tableModelEffectThree,

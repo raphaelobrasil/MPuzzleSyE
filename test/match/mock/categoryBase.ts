@@ -1,4 +1,4 @@
-import { IBasicTable } from '../../../../src/engines'
+import { IBasicTable } from '../../../src/engines'
 
 const callStone = {
   void: { id: 0, type: 'void', category: '' },
@@ -234,7 +234,7 @@ const clearTableModelTenMoveFive: IBasicTable[][] = [ // 1-4 for 1-3 -> 0-4 five
   [callStone.green, callStone.void, callStone.void, callStone.void, callStone.void, callStone.void, callStone.void]
 ]
 
-export const categoryBase = {
+export {
   tableModelEight,
   tableModelNineMoveOne,
   tableModelNineMoveTwo,

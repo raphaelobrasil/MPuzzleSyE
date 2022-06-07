@@ -1,5 +1,5 @@
-import { IStoneDefinition, IBasicTable } from '../../../../src/engines'
-import { IMaskBaseTable, IOccurrence } from '../../../../src/engines/Match3'
+import { IStoneDefinition, IBasicTable } from '../../../src/engines'
+import { IMaskBaseTable, IOccurrence } from '../../../src/engines/Match3'
 
 const categoryDefault = [
   'pattern_default', 'pattern_four', 'pattern_five'
@@ -87,7 +87,7 @@ const callStoneOcorrence = {
   green (occurrence: number): IOccurrence { return { id: 5, type: 'green', category: '', occurrence: occurrence } }
 }
 
-export const base = {
+export {
   table,
   tableRow,
   tableColumn,

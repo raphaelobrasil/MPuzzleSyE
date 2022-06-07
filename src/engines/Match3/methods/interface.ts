@@ -1,5 +1,9 @@
 import { IBasicTable, ISequencial, ISequenceHistory } from '../../index'
-
+export interface IMatchValidate {
+  rows?: IFilterMatchSimple[][]
+  columns?: IFilterMatchSimple[][]
+  cross?: IFilterMatchCross[]
+}
 export interface IMaskBaseTable {
   table: IBasicTable[][]
   countRow: number

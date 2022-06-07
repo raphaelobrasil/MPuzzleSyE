@@ -1,6 +1,5 @@
-/* eslint-disable no-undef */
 import {
-  base,
+  table,
   config,
   crossMatchValitador,
   clearMatchs,
@@ -11,12 +10,12 @@ import {
   crossTableModelFive,
   crossTableModelSix,
   insertNewStones
-} from './conf'
+} from '../config'
 
 describe('Validating insertion of new random stones', () => {
   it('New basic table with random stones', async () => {
-    const tableValidator = await crossMatchValitador({ table: base.table, config: config })
-    const tableValidatorClear = await clearMatchs(base.table, tableValidator)
+    const tableValidator = await crossMatchValitador({ table: table, config: config })
+    const tableValidatorClear = await clearMatchs(table, tableValidator)
     const newTableValidator = await insertNewStones(tableValidatorClear, config)
 
     tableValidatorClear.forEach((row, keyRow) => {

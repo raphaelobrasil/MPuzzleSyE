@@ -1,10 +1,5 @@
-import { IFilterMatchSimple, IBasicTable, IStoneDefinition, IFilterMatchCross, IEffectsCategory, dragDrop, INewSequencial, ISequencial } from '../../'
+import { IBasicTable, IStoneDefinition, IEffectsCategory, dragDrop, INewSequencial, ISequencial, IMatchValidate } from '../../'
 import { ISpecialEffect } from '../methods/category/interface'
-export interface IMatchValidate {
-    rows?: IFilterMatchSimple[][]
-    columns?: IFilterMatchSimple[][]
-    cross?: IFilterMatchCross[]
-}
 
 export interface ISimpleMatch {
     table: IBasicTable[][]

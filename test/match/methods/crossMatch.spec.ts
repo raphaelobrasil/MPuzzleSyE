@@ -1,8 +1,7 @@
-/* eslint-disable no-undef */
 import {
   simpleMatchValitador,
   config,
-  base,
+  table,
   crossTableModelOne,
   crossTableModelTwo,
   crossTableModelThree,
@@ -20,11 +19,11 @@ import {
   crossMatchValitador,
   crossTableModelSeven,
   crossValideModelSeven
-} from './conf'
+} from '../config'
 
 describe('Check if there is cross matchs', () => {
   it('Returns false when there is no cross', async () => {
-    const baseSimpleNoCross = await simpleMatchValitador({ table: base.table, config: config })
+    const baseSimpleNoCross = await simpleMatchValitador({ table: table, config: config })
     expect(IsCross(await filterCrossMatch(baseSimpleNoCross))).toBe(false)
   })
   it('Returns true when there is cross model one', async () => {

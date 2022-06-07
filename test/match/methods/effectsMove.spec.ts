@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import {
   IBasicTable,
   activeEffectsInMatchs,
@@ -33,7 +32,7 @@ import {
   clearSequentialEffects,
   categoryApplication,
   organizeStructure
-} from './conf'
+} from '../config'
 
 const resultOne = async (table: IBasicTable[][]) => {
   const { effects } = await isMatch({ table, config })

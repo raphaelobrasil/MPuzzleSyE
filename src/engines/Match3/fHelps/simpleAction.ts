@@ -1,4 +1,4 @@
-import { IMatchValidate, ISimpleMatch } from './interface'
+import { IMatchValidate, ISimpleMatch } from '../'
 import { occurrenceRanger, filterMatchSimple } from '../methods/simpleMatch/simpleMatch'
 import { extractRow, extractColumn } from '../methods/baseExtract/baseExctract'
 

@@ -1,8 +1,5 @@
-import { IOccurrencePeriod, IFilterMatchSimple } from '../../../../src/engines/Match3'
-
-import { base } from './base'
-
-const { callStoneOcorrence } = base
+import { IOccurrencePeriod, IFilterMatchSimple } from '../../../src/engines/Match3'
+import { callStoneOcorrence } from './base'
 
 const occurrentRow: IOccurrencePeriod[][] = [
   [
@@ -159,7 +156,7 @@ const rowMatchTestOne: IFilterMatchSimple[][] = [
   ]
 ]
 
-export const row = {
+export {
   occurrentRow,
   simulateRowOcurrence,
   rangerMatchRow,

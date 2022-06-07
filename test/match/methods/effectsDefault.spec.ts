@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import {
   activeEffects,
   sequenceHistory,
@@ -28,7 +27,7 @@ import {
   activateEffectTableThreeModelOneSequence,
   activateEffectTableThreeModelTwo,
   activateEffectTableThreeModelTwoSequence
-} from './conf'
+} from '../config'
 
 describe('Validating the activation of effects of the stones from table 1', () => {
   it('Model 1 stone effect activation', async () => {

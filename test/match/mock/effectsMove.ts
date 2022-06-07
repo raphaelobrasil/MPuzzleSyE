@@ -1,4 +1,4 @@
-import { IBasicTable, ISequencial, ISequenceHistory } from '../../../../src/engines'
+import { IBasicTable, ISequencial, ISequenceHistory } from '../../../src/engines'
 
 const crossPeriods = (periodRow: number, periodColumn: number) => ({
   periodRow: periodRow,
@@ -598,7 +598,7 @@ const tableModelEffectTwoModelThreeResult: IBasicTable[][] = [
   [callStone.void, callStone.void, callStone.void, callStone.void, callStone.void, callStone.green, callStone.light]
 ]
 
-export const EffectsMove = {
+export {
   tableModelEffectOneModelOne,
   tableModelEffectOneModelTwo,
   tableModelEffectOneModelThree,

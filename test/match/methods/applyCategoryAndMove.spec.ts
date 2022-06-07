@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import {
   config,
   isMatch,
@@ -37,10 +36,10 @@ import {
   clearTableModelTenMoveThree,
   clearTableModelTenMoveFour,
   clearTableModelTenMoveFive,
-  base,
+  table,
   activeCategorys,
   testInsertionNewStones
-} from './conf'
+} from '../config'
 
 describe('Check that the categories have been applied correctly', () => {
   it('Applying categories to eligible combos in model eight', async () => {
@@ -146,8 +145,8 @@ describe('Validating match move detection', () => {
 
 describe('Check that the categories have been applied correctly in models base, one, two, three, four, five, six and seven', () => {
   it('Applying categories to eligible combos model base', async () => {
-    const reportMatch = await isMatch({ table: base.table, config })
-    const reportClear = await clearMatchs(base.table, reportMatch.match)
+    const reportMatch = await isMatch({ table: table, config })
+    const reportClear = await clearMatchs(table, reportMatch.match)
     const next = await organizeStructure(await categoryApplication({ table: reportClear, activeCategorys, config, matchs: reportMatch.match }))
     expect(next).toStrictEqual(clearTableModelBaseCategory)
   })

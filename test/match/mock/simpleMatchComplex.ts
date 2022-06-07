@@ -1,4 +1,4 @@
-import { IBasicTable, IMatchValidate, IOccurrence } from '../../../../src/engines'
+import { IBasicTable, IMatchValidate, IOccurrence } from '../../../src/engines'
 
 const callStone = {
   void: { id: 0, type: 'void', category: '' },
@@ -519,7 +519,7 @@ const clearMultipleSimpleMatchFour: IBasicTable[][] = [
   [callStone.void, callStone.void, callStone.void, callStone.void, callStone.void, callStone.void, callStone.void]
 ]
 
-export const simpleMatchTestMultiple = {
+export {
   multipleSimpleMatchOne,
   multipleSimpleMatchTwo,
   multipleSimpleMatchThree,

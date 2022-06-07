@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import {
   config,
   crossMatchValitador,
@@ -17,7 +16,7 @@ import {
   clearMultipleSimpleMatchFour,
   activeCategorys,
   testInsertionNewStones
-} from './conf'
+} from '../config'
 
 describe('Validating multiple simple match ', () => {
   it('validating multiple simple match model one', async () => {

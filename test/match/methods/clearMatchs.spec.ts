@@ -1,6 +1,6 @@
-/* eslint-disable no-undef */
 import {
-  base,
+  table,
+  clearTable,
   config,
   crossMatchValitador,
   clearMatchs,
@@ -19,13 +19,13 @@ import {
   clearTableModelSix,
   crossTableModelSeven,
   clearTableModelSeven
-} from './conf'
+} from '../config'
 
 describe('Validating table cleanups according to match', () => {
   it('Basic table cleanup validation base', async () => {
     expect(
-      await organizeStructure(await clearMatchs(base.table, await crossMatchValitador({ table: base.table, config: config })))
-    ).toStrictEqual(base.clearTable)
+      await organizeStructure(await clearMatchs(table, await crossMatchValitador({ table: table, config: config })))
+    ).toStrictEqual(clearTable)
   })
   it('Table model one cleanup validation one', async () => {
     expect(

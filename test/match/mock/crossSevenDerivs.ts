@@ -1,4 +1,4 @@
-import { IBasicTable, IMatchValidate, IOccurrence } from '../../../../src/engines'
+import { IBasicTable, IMatchValidate, IOccurrence } from '../../../src/engines'
 
 const callStone = {
   void: { id: 0, type: 'void', category: '' },
@@ -731,7 +731,7 @@ const crossValideModelSevenDerivEight: IMatchValidate = {
   ]
 }
 
-export const sevenDerivs = {
+export {
   crossTableModelSevenDerivOne,
   crossTableModelSevenDerivTwo,
   crossTableModelSevenDerivThree,

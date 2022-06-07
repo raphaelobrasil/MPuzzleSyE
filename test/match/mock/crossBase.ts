@@ -1,4 +1,4 @@
-import { IBasicTable, IMatchValidate, IOccurrence } from '../../../../src/engines'
+import { IBasicTable, IMatchValidate, IOccurrence } from '../../../src/engines'
 
 const callStone = {
   void: { id: 0, type: 'void', category: '' },
@@ -417,7 +417,7 @@ const clearTableModelSeven: IBasicTable[][] = [
   [callStone.void, callStone.void, callStone.void, callStone.void, callStone.void, callStone.void, callStone.void]
 ]
 
-export const crossBase = {
+export {
   crossTableModelOne,
   crossTableModelTwo,
   crossTableModelThree,

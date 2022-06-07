@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { gameStart, filterCrossMatch, simpleMatchValitador, config } from '../methodos/conf'
+import { gameStart, filterCrossMatch, simpleMatchValitador, config } from '../../config'
 
 describe('Checking standard game methods', () => {
   it('Creating initial table without matches', async () => {

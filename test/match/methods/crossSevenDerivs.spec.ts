@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import {
   config,
   crossMatchValitador,
@@ -29,7 +28,7 @@ import {
   clearCrossTableModelSevenDerivEight,
   activeCategorys,
   testInsertionNewStones
-} from './conf'
+} from '../config'
 
 describe('Validating match cross seven derivs', () => {
   it('validating full complex crossing model seven derivs One', async () => {
