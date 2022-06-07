@@ -1,4 +1,4 @@
-export * as baseExtract from './baseExctract'
+export * as baseExtract from './baseExtract'
 export * from './clearTable'
 export * from './insertNewStones'
 export * as simpleExtract from './simpleMatch/simpleMatch'

@@ -1,4 +1,4 @@
-import { IFilterMatchSimple, iCrossOccurrence } from '../..'
+import { IFilterMatchSimple, ICrossOccurrence } from '../..'
 
 export interface IGetRangeCross {
   columns: IFilterMatchSimple[][]
@@ -39,8 +39,8 @@ export interface IValideChainCross {
 }
 
 export interface IProcessChains {
-  row: iCrossOccurrence[]
-  column: iCrossOccurrence[]
+  row: ICrossOccurrence[]
+  column: ICrossOccurrence[]
   chain: IChain
   id: number
   type: string
@@ -50,5 +50,5 @@ export interface ICombinationsCrossMatchs {
   chains: string[]
   id: number
   type: string
-  ranges: iCrossOccurrence[]
+  ranges: ICrossOccurrence[]
 }

@@ -1,7 +1,7 @@
-import { iCrossOccurrence, IFilterMatchSimple } from '../../../../../interface'
+import { ICrossOccurrence, IFilterMatchSimple } from '../../../../../interface'
 import { ICombinationsCrossMatchs, IChain } from '../../../../crossMatch.interface'
 
-export const filterRange = (data: iCrossOccurrence[]) => data.filter((range, keyRange, arrayRange) =>
+export const filterRange = (data: ICrossOccurrence[]) => data.filter((range, keyRange, arrayRange) =>
   keyRange === arrayRange.findIndex(doubleRange =>
     range.periodColumn === doubleRange.periodColumn && range.periodRow === doubleRange.periodRow
   ))
@@ -9,13 +9,13 @@ export const filterRange = (data: iCrossOccurrence[]) => data.filter((range, key
 export const valideCross = (data: ICombinationsCrossMatchs, first: IChain, second: IChain) =>
   data.chains.find(a => (first.chain.find(b => a === b) || second.chain.find(b => a === b))) && first.range.stone === data.type
 
-export const formatCrossRows = (range: IFilterMatchSimple): iCrossOccurrence[] => range.orderPeriod[0].map(rows =>
+export const formatCrossRows = (range: IFilterMatchSimple): ICrossOccurrence[] => range.orderPeriod[0].map(rows =>
   ({
     periodRow: range.period,
     periodColumn: rows.occurrence
   }))
 
-export const formatCrossColumns = (range: IFilterMatchSimple): iCrossOccurrence[] => range.orderPeriod[0].map(columns =>
+export const formatCrossColumns = (range: IFilterMatchSimple): ICrossOccurrence[] => range.orderPeriod[0].map(columns =>
   ({
     periodRow: columns.occurrence,
     periodColumn: range.period

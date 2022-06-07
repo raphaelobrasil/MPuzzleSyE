@@ -1,6 +1,6 @@
-import { IMatchValidate, ISimpleMatch } from './interface'
+import { IMatchValidate, ISimpleMatch } from '../'
 import { occurrenceRanger, filterMatchSimple } from '../methods/simpleMatch/simpleMatch'
-import { extractRow, extractColumn } from '../methods/baseExctract'
+import { extractRow, extractColumn } from '../methods/baseExtract/baseExctract'
 
 export const simpleMatchValitador = async ({
   table,
