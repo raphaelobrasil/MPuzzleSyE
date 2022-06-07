@@ -63,7 +63,7 @@ const resultCleanup = async (table: IBasicTable[][]) => {
     let newTable = await clearMatchs(table, match)
     if (explodeStones !== undefined) {
       newTable = await clearInitEffect({ table: newTable, effect: explodeStones })
-      if (result !== undefined && result !== undefined) {
+      if (result !== undefined && result[0] !== undefined) {
         newTable = await clearSequentialEffects({ table: newTable, effect: result })
       }
     }

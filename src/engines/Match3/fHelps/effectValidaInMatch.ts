@@ -1,5 +1,5 @@
 import { IeffectValidInMatch, IDetectEffectInOccurrences } from './interface'
-import { IFilterMatchSimple, IFilterMatchCross, IOccurrence, IBasicTable } from '../../'
+import { IFilterMatchSimple, IFilterMatchCross, IOccurrence, IBasicTable } from '../..'
 
 const format = (prop: IDetectEffectInOccurrences) => prop
 

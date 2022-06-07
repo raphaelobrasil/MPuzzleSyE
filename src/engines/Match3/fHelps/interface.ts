@@ -28,9 +28,15 @@ export interface IGameStart {
     config: IStoneDefinition<number, string, string>
 }
 
-export interface IisMatch {
+export interface IIsMatch {
     table: IBasicTable[][]
     config: IStoneDefinition<number, string, string>
+}
+
+export interface IIsMatchResponse { 
+    isMatch: boolean
+    match: IMatchValidate
+    effects: IDetectEffectInOccurrences[]
 }
 
 export interface IeffectValidInMatch {
@@ -73,4 +79,27 @@ export type IStoneActiveSequence = {
     row: number
     column: number
     stage: number
+}
+
+export interface IFEventsProcess {
+    table: IBasicTable[][],
+    config: IStoneDefinition<number, string, string>,
+    activeCategorys: IEffectsCategory[]
+}
+
+export interface IClearTableMatchAndEffects {
+    table: IBasicTable[][],
+    match: IMatchValidate,
+    explodeStones: ISequencial,
+    result: ISequenceHistory[]
+}
+
+export interface ICompletProcess {
+    isMatch: IIsMatchResponse,
+    initialEffect: ISequencial | null,
+    sequenceEffect: ISequenceHistory[] | null,
+    clearTable: IBasicTable[][] | null,
+    categoryApply: IBasicTable[][] | null,
+    organizeTable: IBasicTable[][] | null,
+    newTable: IBasicTable[][] | null
 }
