@@ -1,12 +1,12 @@
 {
   "name": "mpuzzlesye",
-  "version": "1.0.17",
+  "version": "1.6.0",
   "description": "Engine System of game Match Puzzle",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "run tsc",
-    "test": "jest"
+    "test": "jest --watchAll --coverage"
   },
   "repository": {
     "type": "git",

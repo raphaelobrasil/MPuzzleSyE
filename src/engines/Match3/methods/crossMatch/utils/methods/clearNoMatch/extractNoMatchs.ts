@@ -1,4 +1,4 @@
-import { IFilterMatchSimple, iOccurrence } from '../../../../..'
+import { IFilterMatchSimple, IOccurrence } from '../../../../..'
 
 const validePeriod = (period: IFilterMatchSimple, dupPeriod: IFilterMatchSimple) =>
   period.stone === dupPeriod.stone &&
@@ -12,7 +12,7 @@ export const extractNoMatchs = (table: IFilterMatchSimple[]): IFilterMatchSimple
         ...period,
         orderPeriod: [
           ...period.orderPeriod,
-          ...arrayPeriod.reduce((newsPeriods: iOccurrence[][], periodValue) =>
+          ...arrayPeriod.reduce((newsPeriods: IOccurrence[][], periodValue) =>
             validePeriod(period, periodValue) && JSON.stringify(period.orderPeriod) !== JSON.stringify(periodValue.orderPeriod)
               ? [...newsPeriods, ...periodValue.orderPeriod]
               : newsPeriods,

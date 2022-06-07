@@ -1,5 +1,5 @@
 import { IEffects } from '../interface'
-import { iCrossOccurrence } from '../../../'
+import { ICrossOccurrence } from '../../../'
 
 export const patternFour = async ({ row, column, table }: IEffects) => {
   const limitRow = table[0].length - 1
@@ -9,7 +9,7 @@ export const patternFour = async ({ row, column, table }: IEffects) => {
   const left = column - 1
   const top = row - 1
   const down = row + 1
-  let sequence: iCrossOccurrence[] = [{ periodRow: row, periodColumn: column }]
+  let sequence: ICrossOccurrence[] = [{ periodRow: row, periodColumn: column }]
   if (left >= limitInit) {
     sequence = [...sequence, { periodRow: row, periodColumn: left }]
   }
