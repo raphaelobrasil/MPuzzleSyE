@@ -1,4 +1,4 @@
-# Match Puzzle System Engine (MPuzzleSyE) V. 1.5.0
+# Match Puzzle System Engine (MPuzzleSyE) V. 1.6.0
 
 > O Match Puzzle Engine System (MPuzzleSyE) é um sistema motor do jogo de tabuleiro de matchs 3, aqui concentro todos os recursos lógicos básicos necessários e customizáveis para construir um fluxo de adequado. Quanto a construção do layout fica a critério de quem for usar.
 > ## Documentação
