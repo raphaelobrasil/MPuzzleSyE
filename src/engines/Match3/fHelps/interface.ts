@@ -6,16 +6,6 @@ export interface ISimpleMatch {
     config: IStoneDefinition<number, string, string>
 }
 
-export interface IGameProcess {
-    table: IBasicTable[][]
-    effects: IEffectsCategory[]
-    config: IStoneDefinition<number, string, string>
-    move?: {
-        drag: dragDrop
-        drop: dragDrop
-    }
-}
-
 export interface IDetectEffectInOccurrences {
     stone: { id: number, type: string, category: string }
     row: number
@@ -85,6 +75,10 @@ export interface IFEventsProcess {
     table: IBasicTable[][],
     config: IStoneDefinition<number, string, string>,
     activeCategorys: IEffectsCategory[]
+    move?: {
+        drag: dragDrop
+        drop: dragDrop
+    }
 }
 
 export interface IClearTableMatchAndEffects {

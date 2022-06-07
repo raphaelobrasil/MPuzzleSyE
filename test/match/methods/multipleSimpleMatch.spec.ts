@@ -1,7 +1,7 @@
 import {
   config,
   crossMatchValitador,
-  gameProcess,
+  fEventsProcess,
   multipleSimpleMatchOne,
   multipleSimpleMatchTwo,
   multipleSimpleMatchThree,
@@ -39,19 +39,19 @@ describe('Validating multiple simple match ', () => {
 
 describe('Validating clear with fHelps in multiple simple match', () => {
   it('Validation clear cross match in  multiple simple match one', async () => {
-    const table = await gameProcess({ table: multipleSimpleMatchOne, effects: activeCategorys, config })
-    testInsertionNewStones(clearMultipleSimpleMatchOne, table)
+    const table = await fEventsProcess({ table: multipleSimpleMatchOne, config, activeCategorys })
+    testInsertionNewStones(clearMultipleSimpleMatchOne, table.newTable)
   })
   it('Validation clear cross match in  multiple simple match two', async () => {
-    const table = await gameProcess({ table: multipleSimpleMatchTwo, effects: activeCategorys, config })
-    testInsertionNewStones(clearMultipleSimpleMatchTwo, table)
+    const table = await fEventsProcess({ table: multipleSimpleMatchTwo, config, activeCategorys })
+    testInsertionNewStones(clearMultipleSimpleMatchTwo, table.newTable)
   })
   it('Validation clear cross match in  multiple simple match three', async () => {
-    const table = await gameProcess({ table: multipleSimpleMatchThree, effects: activeCategorys, config })
-    testInsertionNewStones(clearMultipleSimpleMatchThree, table)
+    const table = await fEventsProcess({ table: multipleSimpleMatchThree, config, activeCategorys })
+    testInsertionNewStones(clearMultipleSimpleMatchThree, table.newTable)
   })
   it('Validation clear cross match in  multiple simple match four', async () => {
-    const table = await gameProcess({ table: multipleSimpleMatchFour, effects: activeCategorys, config })
-    testInsertionNewStones(clearMultipleSimpleMatchFour, table)
+    const table = await fEventsProcess({ table: multipleSimpleMatchFour, config, activeCategorys })
+    testInsertionNewStones(clearMultipleSimpleMatchFour, table.newTable)
   })
 })

@@ -4,7 +4,7 @@ import {
   categoryApplication,
   clearMatchs,
   organizeStructure,
-  gameProcess,
+  fEventsProcess,
   tableModelEight,
   tableModelEleven,
   clearTableModelEight,
@@ -49,12 +49,12 @@ describe('Check that the categories have been applied correctly', () => {
     expect(next).toStrictEqual(clearTableModelEight)
   })
   it('Applying categories to eligible combos and fills gaps in model eight', async () => {
-    const table = await gameProcess({ table: tableModelEight, effects: activeCategorys, config })
+    const table = await fEventsProcess({ table: tableModelEight, config, activeCategorys })
     clearTableModelEight.forEach((e, row) => e.forEach((cell, column) => {
       if (cell.type === 'void') {
-        expect(table[row][column]).not.toStrictEqual(cell)
+        expect(table.newTable[row][column]).not.toStrictEqual(cell)
       } else {
-        expect(table[row][column]).toStrictEqual(cell)
+        expect(table.newTable[row][column]).toStrictEqual(cell)
       }
     }))
   })
@@ -65,81 +65,81 @@ describe('Check that the categories have been applied correctly', () => {
     expect(next).toStrictEqual(clearTableModelEleven)
   })
   it('Applying categories to eligible combos complex and fills gaps in model eleven', async () => {
-    const table = await gameProcess({ table: tableModelEleven, effects: activeCategorys, config })
-    testInsertionNewStones(clearTableModelEleven, table)
+    const table = await fEventsProcess({ table: tableModelEleven, config, activeCategorys })
+    testInsertionNewStones(clearTableModelEleven, table.newTable)
   })
 })
 
 describe('Validating match move detection', () => {
   it('Move detection model table nine, type one example one', async () => {
     const move = { drag: { row: 1, column: 3 }, drop: { row: 0, column: 3 } }
-    const table = await gameProcess({ table: tableModelNineMoveOne, effects: activeCategorys, config, move })
-    testInsertionNewStones(clearTableModelNineMoveOne, table)
+    const table = await fEventsProcess({ table: tableModelNineMoveOne, config, activeCategorys, move })
+    testInsertionNewStones(clearTableModelNineMoveOne, table.newTable)
   })
   it('Move detection model table nine, type one example two', async () => {
     const move = { drop: { row: 1, column: 3 }, drag: { row: 0, column: 3 } }
-    const table = await gameProcess({ table: tableModelNineMoveOne, effects: activeCategorys, config, move })
-    testInsertionNewStones(clearTableModelNineMoveOne, table)
+    const table = await fEventsProcess({ table: tableModelNineMoveOne, config, activeCategorys, move })
+    testInsertionNewStones(clearTableModelNineMoveOne, table.newTable)
   })
   it('Move detection model table nine, type two example one', async () => {
     const move = { drag: { row: 3, column: 2 }, drop: { row: 2, column: 2 } }
-    const table = await gameProcess({ table: tableModelNineMoveTwo, effects: activeCategorys, config, move })
-    testInsertionNewStones(clearTableModelNineMoveTwo, table)
+    const table = await fEventsProcess({ table: tableModelNineMoveTwo, config, activeCategorys, move })
+    testInsertionNewStones(clearTableModelNineMoveTwo, table.newTable)
   })
   it('Move detection model table nine, type two example two', async () => {
     const move = { drop: { row: 3, column: 2 }, drag: { row: 2, column: 2 } }
-    const table = await gameProcess({ table: tableModelNineMoveTwo, effects: activeCategorys, config, move })
-    testInsertionNewStones(clearTableModelNineMoveTwo, table)
+    const table = await fEventsProcess({ table: tableModelNineMoveTwo, config, activeCategorys, move })
+    testInsertionNewStones(clearTableModelNineMoveTwo, table.newTable)
   })
   it('Move detection model table teen, type one example one', async () => { // 3-0 for 3-1
     const move = { drag: { row: 3, column: 0 }, drop: { row: 3, column: 1 } }
-    const table = await gameProcess({ table: tableModelTenMoveOne, effects: activeCategorys, config, move })
-    testInsertionNewStones(clearTableModelTenMoveOne, table)
+    const table = await fEventsProcess({ table: tableModelTenMoveOne, config, activeCategorys, move })
+    testInsertionNewStones(clearTableModelTenMoveOne, table.newTable)
   })
   it('Move detection model table teen, type one example two', async () => { // 3-0 for 3-1
     const move = { drop: { row: 3, column: 0 }, drag: { row: 3, column: 1 } }
-    const table = await gameProcess({ table: tableModelTenMoveOne, effects: activeCategorys, config, move })
-    testInsertionNewStones(clearTableModelTenMoveOne, table)
+    const table = await fEventsProcess({ table: tableModelTenMoveOne, config, activeCategorys, move })
+    testInsertionNewStones(clearTableModelTenMoveOne, table.newTable)
   })
   it('Move detection model table teen, type two example one', async () => { // 3-5 for 3-4
     const move = { drag: { row: 3, column: 4 }, drop: { row: 3, column: 5 } }
-    const table = await gameProcess({ table: tableModelTenMoveTwo, effects: activeCategorys, config, move })
-    testInsertionNewStones(clearTableModelTenMoveTwo, table)
+    const table = await fEventsProcess({ table: tableModelTenMoveTwo, config, activeCategorys, move })
+    testInsertionNewStones(clearTableModelTenMoveTwo, table.newTable)
   })
   it('Move detection model table teen, type two example two', async () => { // 3-5 for 3-4
     const move = { drop: { row: 3, column: 4 }, drag: { row: 3, column: 5 } }
-    const table = await gameProcess({ table: tableModelTenMoveTwo, effects: activeCategorys, config, move })
-    testInsertionNewStones(clearTableModelTenMoveTwo, table)
+    const table = await fEventsProcess({ table: tableModelTenMoveTwo, config, activeCategorys, move })
+    testInsertionNewStones(clearTableModelTenMoveTwo, table.newTable)
   })
   it('Move detection model table teen, type three example one', async () => { // 1-4 for 2-4
     const move = { drag: { row: 1, column: 4 }, drop: { row: 2, column: 4 } }
-    const table = await gameProcess({ table: tableModelTenMoveThree, effects: activeCategorys, config, move })
-    testInsertionNewStones(clearTableModelTenMoveThree, table)
+    const table = await fEventsProcess({ table: tableModelTenMoveThree, config, activeCategorys, move })
+    testInsertionNewStones(clearTableModelTenMoveThree, table.newTable)
   })
   it('Move detection model table teen, type three example two', async () => { // 1-4 for 2-4
     const move = { drop: { row: 1, column: 4 }, drag: { row: 2, column: 4 } }
-    const table = await gameProcess({ table: tableModelTenMoveThree, effects: activeCategorys, config, move })
-    testInsertionNewStones(clearTableModelTenMoveThree, table)
+    const table = await fEventsProcess({ table: tableModelTenMoveThree, config, activeCategorys, move })
+    testInsertionNewStones(clearTableModelTenMoveThree, table.newTable)
   })
   it('Move detection model table teen, type four example one', async () => { // 1-4 for 0-4
     const move = { drag: { row: 1, column: 4 }, drop: { row: 0, column: 4 } }
-    const table = await gameProcess({ table: tableModelTenMoveFour, effects: activeCategorys, config, move })
-    testInsertionNewStones(clearTableModelTenMoveFour, table)
+    const table = await fEventsProcess({ table: tableModelTenMoveFour, config, activeCategorys, move })
+    testInsertionNewStones(clearTableModelTenMoveFour, table.newTable)
   })
   it('Move detection model table teen, type four example two', async () => { // 1-4 for 0-4
     const move = { drop: { row: 1, column: 4 }, drag: { row: 0, column: 4 } }
-    const table = await gameProcess({ table: tableModelTenMoveFour, effects: activeCategorys, config, move })
-    testInsertionNewStones(clearTableModelTenMoveFour, table)
+    const table = await fEventsProcess({ table: tableModelTenMoveFour, config, activeCategorys, move })
+    testInsertionNewStones(clearTableModelTenMoveFour, table.newTable)
   })
   it('Move detection model table teen, type five example one', async () => { // 1-4 for 1-3 -> 0-4 five!
     const move = { drag: { row: 1, column: 4 }, drop: { row: 1, column: 3 } }
-    const table = await gameProcess({ table: tableModelTenMoveFive, effects: activeCategorys, config, move })
-    testInsertionNewStones(clearTableModelTenMoveFive, table)
+    const table = await fEventsProcess({ table: tableModelTenMoveFive, config, activeCategorys, move })
+    testInsertionNewStones(clearTableModelTenMoveFive, table.newTable)
   })
   it('Move detection model table teen, type five example two', async () => { // 1-4 for 1-3 -> 0-4 five!
     const move = { drop: { row: 1, column: 4 }, drag: { row: 1, column: 3 } }
-    const table = await gameProcess({ table: tableModelTenMoveFive, effects: activeCategorys, config, move })
-    testInsertionNewStones(clearTableModelTenMoveFive, table)
+    const table = await fEventsProcess({ table: tableModelTenMoveFive, config, activeCategorys, move })
+    testInsertionNewStones(clearTableModelTenMoveFive, table.newTable)
   })
 })
 

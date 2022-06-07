@@ -4,7 +4,7 @@ import {
   sequenceHistory, ICompletProcess, IFEventsProcess, clearTableMatchAndEffects
 } from '../../'
 
-export const fEventsProcess = async ({ table, config, activeCategorys }: IFEventsProcess) => {
+export const fEventsProcess = async ({ table, config, activeCategorys, move }: IFEventsProcess) => {
   const matchVerify = await isMatch({ table, config })
   const { effects, match } = matchVerify
   let response: ICompletProcess = {
@@ -20,7 +20,7 @@ export const fEventsProcess = async ({ table, config, activeCategorys }: IFEvent
     const explodeStones = await activeEffectsInMatchs({ table, activeCategorys, occurrences: effects })
     const result = await sequenceHistory({ sequenceInitial: explodeStones, table, effects: activeCategorys })
     const clearTable = await clearTableMatchAndEffects({ table, match, explodeStones, result })
-    const applyCategory = await categoryApplication({ table: clearTable, activeCategorys, matchs: match, config })
+    const applyCategory = await categoryApplication({ table: clearTable, activeCategorys, matchs: match, config, move })
     const ReorganizeNewTable = await organizeStructure(applyCategory)
     response = {
       ...response,
@@ -32,10 +32,17 @@ export const fEventsProcess = async ({ table, config, activeCategorys }: IFEvent
     }
   } else if (matchVerify.isMatch) {
     const clearTable = await clearMatchs(table, match)
-    response = { ...response, clearTable: clearTable }
+    const applyCategory = await categoryApplication({ table: clearTable, activeCategorys, matchs: match, config, move })
+    const ReorganizeNewTable = await organizeStructure(applyCategory)
+    response = {
+      ...response,
+      clearTable: clearTable,
+      categoryApply: applyCategory,
+      organizeTable: ReorganizeNewTable
+    }
   }
-  if (response.clearTable) {
-    const newTable = await insertNewStones(response.clearTable, config)
+  if (response.organizeTable) {
+    const newTable = await insertNewStones(response.organizeTable, config)
     response = { ...response, newTable: newTable }
   }
   return response

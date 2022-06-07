@@ -1,16 +1,6 @@
 import { categoryApplication } from '../methods/category/categoryApplication'
-import { IGameProcess, INextStage, IClearStage } from './interface'
-import { crossMatchValitador } from './crossAction'
+import { INextStage, IClearStage } from './interface'
 import { clearMatchs, insertNewStones, organizeStructure, clearInitEffect, clearSequentialEffects } from '../../'
-
-export const gameProcess = async ({ table, effects, config, move }: IGameProcess) => {
-  const matchs = await crossMatchValitador({ table, config })
-  let newTable = await clearMatchs(table, matchs)
-  newTable = await categoryApplication({ table: newTable, activeCategorys: effects, matchs, config, move })
-  newTable = await organizeStructure(newTable)
-  newTable = await insertNewStones(newTable, config)
-  return newTable
-}
 
 
 export const clearStage = async ({ table, match, effectActive }: IClearStage) => {

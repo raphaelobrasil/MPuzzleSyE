@@ -1,7 +1,7 @@
 import {
   config,
   crossMatchValitador,
-  gameProcess,
+  fEventsProcess,
   crossTableModelSevenDerivOne,
   crossValideModelSevenDerivOne,
   crossTableModelSevenDerivTwo,
@@ -67,35 +67,35 @@ describe('Validating match cross seven derivs', () => {
 
 describe('Validating clear with fHelps in seven derivs', () => {
   it('Validation clear cross match in seven derivs one', async () => {
-    const table = await gameProcess({ table: crossTableModelSevenDerivOne, effects: activeCategorys, config })
-    testInsertionNewStones(clearCrossTableModelSevenDerivOne, table)
+    const table = await fEventsProcess({ table: crossTableModelSevenDerivOne, config, activeCategorys })
+    testInsertionNewStones(clearCrossTableModelSevenDerivOne, table.newTable)
   })
   it('Validation clear cross match in seven derivs two', async () => {
-    const table = await gameProcess({ table: crossTableModelSevenDerivTwo, effects: activeCategorys, config })
-    testInsertionNewStones(clearCrossTableModelSevenDerivTwo, table)
+    const table = await fEventsProcess({ table: crossTableModelSevenDerivTwo, config, activeCategorys })
+    testInsertionNewStones(clearCrossTableModelSevenDerivTwo, table.newTable)
   })
   it('Validation clear cross match in seven derivs three', async () => {
-    const table = await gameProcess({ table: crossTableModelSevenDerivThree, effects: activeCategorys, config })
-    testInsertionNewStones(clearCrossTableModelSevenDerivThree, table)
+    const table = await fEventsProcess({ table: crossTableModelSevenDerivThree, config, activeCategorys })
+    testInsertionNewStones(clearCrossTableModelSevenDerivThree, table.newTable)
   })
   it('Validation clear cross match in seven derivs four', async () => {
-    const table = await gameProcess({ table: crossTableModelSevenDerivFour, effects: activeCategorys, config })
-    testInsertionNewStones(clearCrossTableModelSevenDerivFour, table)
+    const table = await fEventsProcess({ table: crossTableModelSevenDerivFour, config, activeCategorys })
+    testInsertionNewStones(clearCrossTableModelSevenDerivFour, table.newTable)
   })
   it('Validation clear cross match in seven derivs five', async () => {
-    const table = await gameProcess({ table: crossTableModelSevenDerivFive, effects: activeCategorys, config })
-    testInsertionNewStones(clearCrossTableModelSevenDerivFive, table)
+    const table = await fEventsProcess({ table: crossTableModelSevenDerivFive, config, activeCategorys })
+    testInsertionNewStones(clearCrossTableModelSevenDerivFive, table.newTable)
   })
   it('Validation clear cross match in seven derivs Six', async () => {
-    const table = await gameProcess({ table: crossTableModelSevenDerivSix, effects: activeCategorys, config })
-    testInsertionNewStones(clearCrossTableModelSevenDerivSix, table)
+    const table = await fEventsProcess({ table: crossTableModelSevenDerivSix, config, activeCategorys })
+    testInsertionNewStones(clearCrossTableModelSevenDerivSix, table.newTable)
   })
   it('Validation clear cross match in seven derivs Seven', async () => {
-    const table = await gameProcess({ table: crossTableModelSevenDerivSeven, effects: activeCategorys, config })
-    testInsertionNewStones(clearCrossTableModelSevenDerivSeven, table)
+    const table = await fEventsProcess({ table: crossTableModelSevenDerivSeven, config, activeCategorys })
+    testInsertionNewStones(clearCrossTableModelSevenDerivSeven, table.newTable)
   })
   it('Validation clear cross match in seven derivs Eight', async () => {
-    const table = await gameProcess({ table: crossTableModelSevenDerivEight, effects: activeCategorys, config })
-    testInsertionNewStones(clearCrossTableModelSevenDerivEight, table)
+    const table = await fEventsProcess({ table: crossTableModelSevenDerivEight, config, activeCategorys })
+    testInsertionNewStones(clearCrossTableModelSevenDerivEight, table.newTable)
   })
 })
