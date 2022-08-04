@@ -7,7 +7,7 @@ const tablePuzzle = ({
 }: IConfigTable): IBasicTable[][] => {
   const columnPuzzle = () =>
     Array(column).fill(null).map(_c => {
-      const rng = stoneGacha.stonesRng.unitStone()
+      const rng = stoneGacha.stonesRng.unitStone(stoneConfig.length)
       return {
         id: stoneConfig[rng].id,
         type: stoneConfig[rng].type,
