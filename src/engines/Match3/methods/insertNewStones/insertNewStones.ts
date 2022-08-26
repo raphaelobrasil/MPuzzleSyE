@@ -4,7 +4,7 @@ export const insertNewStones = async (table: IBasicTable[][], stoneConfig: ISton
   try {
     return table.map(row => row.map(column => {
       if (Number(column.id) === Number(0)) {
-        const rng = stoneGacha.stonesRng.unitStone()
+        const rng = stoneGacha.stonesRng.unitStone(stoneConfig.length)
         return {
           id: stoneConfig[rng].id,
           type: stoneConfig[rng].type,
