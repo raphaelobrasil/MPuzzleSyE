@@ -16,7 +16,7 @@ npm i mpuzzlesye
 ```
 
 
-[Documentação]: <https://raphaelobrasil.github.io/mpuzzlesye.github.io/>
+[Documentação]: <https://raphaelobrasil.github.io/mpuzzlesyedoc/>
 [Demo]: <https://demo-mpuzzlesye.vercel.app/>
 
 `Raphael Brasil`
