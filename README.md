@@ -5,8 +5,7 @@
 > ## [Documentação]
 > A documentação já foi escrita e está em processo de formatação no wiki.
 
-> ## Demo
-> Em seguida a documentação, pretendo construir uma demo bem básica de código fechado para demonstrar como esse código pode funcionar. 
+> ## [Demo]
 
 
 ## Instalação
@@ -17,5 +16,6 @@ npm i mpuzzlesye
 
 
 [Documentação]: <https://raphaelobrasil.github.io/mpuzzlesye.github.io/>
+[Demo]: <https://demo-mpuzzlesye.vercel.app/>
 
 `Raphael Brasil`
